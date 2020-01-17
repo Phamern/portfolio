@@ -37,6 +37,9 @@ button {
   text-transform: uppercase;
   padding: 20px;
   cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: .6rem;
 }
 
 main h1 {

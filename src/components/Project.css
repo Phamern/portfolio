@@ -13,7 +13,8 @@
   top: 80vh;
   border-radius: 50%;
   height: 75px;
-  background: hotpink;
+  background: #fff;
+  border: 1px solid black;
   display: grid;
   place-items: center;
   box-shadow: rgba(0, 0, 0, .4) 1px 3px 10px;

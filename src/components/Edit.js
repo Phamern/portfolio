@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import firebase from "./firebase"
 import "./Edit.css"
 import FileUploader from 'react-firebase-file-uploader'
+import { Link } from '@reach/router'
 
 const Edit = props => {
   const [project, setProject] = useState({})
@@ -109,10 +110,12 @@ const Edit = props => {
             onProgress={handleProgress}
           />
         </label>
-        <button onClick={submitChanges}>
-          Submit Changes
-        </button>
       </form>
+      <button onClick={submitChanges}>
+          <Link to='/'>
+           Submit Changes
+          </Link>
+        </button>
       <p>{status}</p>
     </main>
   );

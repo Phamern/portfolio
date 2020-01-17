@@ -3,6 +3,7 @@ import './Projects.css'
 import firebase from './firebase'
 import Project from './Project'
 import { IoMdAdd } from 'react-icons/io'
+import { navigate } from '@reach/router'
 
 const Projects = (props) => {
 
@@ -25,14 +26,14 @@ const Projects = (props) => {
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
       }
     )
-    .then(doc => console.log('added document with id', doc.id))
+    .then(doc => navigate('/edit/' + doc.id) )
   }
 
   return (
     <main>
         { props.signedIn &&
             <div className='add'>
-              <IoMdAdd className='icons' onClick={addProject} />
+                <IoMdAdd className='icons' onClick={addProject} />
             </div>
         }
       <div className='projectsContainer'>

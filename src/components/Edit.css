@@ -15,20 +15,21 @@ textarea {
 
 .edit label {
   padding: 0;
-  display: inline-block;
 }
 
-button, .uploadButton {
-  width: 150px;
-  height: 50px;
+  .uploadButton {
+  width: 120px;
+  height: 30px;
   border: none;
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, .2) 1px 1px 2px;
   font-family: 'Josefin sans';
   text-transform: uppercase;
-  padding: 20px;
+  padding: 10px;
   cursor: pointer;
   display: grid;
   place-items: center;
   font-size: .6rem;
+  border: 1px solid black;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, .2) 1px 1px 2px;
+  margin-top: 1rem;
 }

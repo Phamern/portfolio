@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&display=swap');
+
+* {
+  box-sizing: border-box
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Josefin sans';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+h1 {
+  display: grid;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  padding: 20vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, .2) 1px 1px 2px;
+  font-family: 'Josefin sans';
+  text-transform: uppercase;
+  padding: 20px;
+  cursor: pointer;
+}
+
+main h1 {
+  margin-bottom: 3rem;
+}
+
+.login img {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.icons {
+  transform: scale(3);
 }

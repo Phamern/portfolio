@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'
+import './App.css'
+import { Router } from '@reach/router'
+import Projects from './components/Projects'
+import Contact from './components/Contact'
+import Header from './components/Header'
+import Cv from './components/Cv'
+import Login from './components/Login'
+import firebase from './components/firebase'
 
-function App() {
+const App = () => {
+
+  const [signedIn, setSignedIn] = useState(false)
+
+  useEffect( () => {
+    firebase.auth().onAuthStateChanged(
+      user => {
+        if(user) {
+          setSignedIn(true)
+        } else {
+          setSignedIn(false)
+        }
+      }
+    )
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Header signedIn={signedIn} />
+      <Router>
+        <Projects path='/' signedIn={signedIn} />
+        <Contact path='/contact' />
+        <Cv path='/cv' />
+        <Login signedIn={signedIn} setSignedIn={setSignedIn} path='/login' />
+      </Router>
+    </>
+  )
 }
 
 export default App;

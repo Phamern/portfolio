@@ -1,0 +1,9 @@
+.project {
+  min-height: 350px;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, .2) 1px 3px 6px;
+}
+
+.add .icons {
+  margin-bottom: 3rem;
+}

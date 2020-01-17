@@ -7,6 +7,7 @@ import Header from './components/Header'
 import Cv from './components/Cv'
 import Login from './components/Login'
 import firebase from './components/firebase'
+import Edit from './components/Edit'
 
 const App = () => {
 
@@ -32,6 +33,7 @@ const App = () => {
         <Contact path='/contact' />
         <Cv path='/cv' />
         <Login signedIn={signedIn} setSignedIn={setSignedIn} path='/login' />
+        <Edit path='/edit/:id' />
       </Router>
     </>
   )

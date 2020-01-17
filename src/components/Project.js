@@ -2,6 +2,8 @@ import React from 'react'
 import './Project.css'
 import firebase from './firebase'
 import { IoMdTrash, IoIosCode } from 'react-icons/io'
+import { Link } from '@reach/router'
+import parse from 'html-react-parser'
 
 const Project = (props) => {
   const removeProject = () => {
@@ -15,21 +17,28 @@ const Project = (props) => {
     }
   }
 
-  const editProject = () => {
-
-  }
-
   return (
     <div className='project'>
-      <h4>{props.data.title}</h4>
-      <p>{props.data.description}</p>
       {
-        props.data.color && <p>farge: {props.data.color}</p>
+        props.data.defaultImage && 
+      <img src={props.data.defaultImage} alt='default' />
+      }
+      <h3>{props.data.title}</h3>
+      {
+        props.data.description &&
+        <div>
+          {parse(props.data.description)}
+        </div>
+      }
+      {
+        props.data.color && <h4>farge: {props.data.color}</h4>
       }
       {
         props.signedIn &&
       <div className='admin-icons'>
-        <IoIosCode onClick={editProject} />
+        <Link to={'/edit/' + props.id}>
+          <IoIosCode />
+        </Link>
         <IoMdTrash onClick={removeProject} />
       </div>
       }

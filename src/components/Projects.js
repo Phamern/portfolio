@@ -38,7 +38,12 @@ const Projects = (props) => {
       <div className='projectsContainer'>
         {
           projects.map(
-          project => <Project key={project.id} id={project.id} data={project.data()} signedIn={props.signedIn}/>
+          project => 
+          <Project 
+            key={project.id}
+            id={project.id}
+            data={project.data()}
+            signedIn={props.signedIn}/>
           )
         }
       </div>

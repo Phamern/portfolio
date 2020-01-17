@@ -54,3 +54,7 @@ main h1 {
   transform: scale(2);
   cursor: pointer;
 }
+
+a {
+  color: black;
+}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Projects.css'
 import firebase from './firebase'
 import Project from './Project'
-import { IoIosAddCircleOutline } from 'react-icons/io'
+import { IoMdAdd } from 'react-icons/io'
 
 const Projects = (props) => {
 
@@ -32,13 +32,13 @@ const Projects = (props) => {
     <main>
         { props.signedIn &&
             <div className='add'>
-              <IoIosAddCircleOutline className='icons' onClick={addProject} />
+              <IoMdAdd className='icons' onClick={addProject} />
             </div>
         }
       <div className='projectsContainer'>
         {
           projects.map(
-          project => <Project key={project.id} id={project.id} data={project.data()}/>
+          project => <Project key={project.id} id={project.id} data={project.data()} signedIn={props.signedIn}/>
           )
         }
       </div>

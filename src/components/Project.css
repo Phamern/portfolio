@@ -2,8 +2,29 @@
   min-height: 350px;
   padding: 2rem;
   box-shadow: rgba(0, 0, 0, .2) 1px 3px 6px;
+  position: relative;
 }
 
-.add .icons {
-  margin-bottom: 3rem;
+.add {
+  position: fixed;
+  width: 75px;
+  right: 3vw;
+  top: 80vh;
+  border-radius: 50%;
+  height: 75px;
+  background: hotpink;
+  display: grid;
+  place-items: center;
+  box-shadow: rgba(0, 0, 0, .4) 1px 3px 10px;
+}
+
+.admin-icons {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  gap: 1rem;
+  cursor: pointer;
 }

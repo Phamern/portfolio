@@ -51,5 +51,6 @@ main h1 {
 }
 
 .icons {
-  transform: scale(3);
+  transform: scale(2);
+  cursor: pointer;
 }

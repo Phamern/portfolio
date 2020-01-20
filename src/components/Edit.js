@@ -70,7 +70,7 @@ const Edit = props => {
 
   return (
     <main className='edit'>
-      <h1>Edit Project : {props.id}</h1>
+      <h1>Edit Project : {project.title}</h1>
       <form onSubmit={saveProject}>
       <p>Title: </p>
         <input

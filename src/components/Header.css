@@ -18,6 +18,11 @@ header a {
   color: #0a0a0a;
 }
 
+header h1 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 [aria-current='page'] {
   font-weight: bold;
 }

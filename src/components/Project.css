@@ -4,15 +4,43 @@
   box-shadow: rgba(0, 0, 0, .2) 1px 3px 6px;
   position: relative;
   background: white;
+  margin-bottom: 30px;
+  width: 350px;
 }
+
+
+
+/*
+
+Mulig løsning for animering av projekter til fullscreen.
+
+.project.active {
+  position: absolute;
+  animation: zoomIn .4s ease;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: 1;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0, 0);
+  }
+
+  to {
+    transform: scale(100vw, 100vh);
+  }
+} */
 
 .add {
   position: fixed;
-  width: 75px;
+  width: 60px;
+  height: 60px;
   right: 3vw;
   top: 80vh;
   border-radius: 50%;
-  height: 75px;
   background: #fff;
   border: 1px solid black;
   display: grid;

@@ -27,15 +27,13 @@ const Project = (props) => {
       <img src={props.data.defaultImage} alt='default' />
       }
       <h3>{props.data.title}</h3>
-      {
-        props.data.description &&
-        <div>
-          {parse(props.data.description)}
+        <div className='year'>
+          {props.data.year}
         </div>
-      }
-      {
-        props.data.color && <h4>farge: {props.data.color}</h4>
-      }
+        <div className='byline'>
+          {props.data.byline}
+        </div>
+        <Link to={'/projects/' + props.id}>See project</Link>
       {
         props.signedIn &&
       <div className='admin-icons'>

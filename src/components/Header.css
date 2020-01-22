@@ -1,9 +1,24 @@
-
-header {
+.header-container {
   position: fixed;
   width: 100vw;
   height: 10vh;
   background: #fff;
+  display: grid;
+  place-items: end;
+  z-index: 2;
+}
+
+.burger-menu {
+  display: none;
+  z-index: 2;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, .4) 1px 1px 5px;
+  width: 100vw;
+}
+
+header {
+  width: 100vw;
+  height: 10vh;
   display: grid;
   grid-auto-flow:  column;
   justify-content: flex-start;
@@ -11,6 +26,8 @@ header {
   gap: 1rem;
   z-index: 1;
   box-shadow: rgba(0, 0, 0, .4) 1px 1px 5px;
+  background: #fff;
+  z-index: 3;
 }
 
 header a {
@@ -25,4 +42,44 @@ header h1 {
 
 [aria-current='page'] {
   font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+
+  .header-container {
+    place-items: center;
+  }
+   
+  header {
+    transform: translateY(-150%);
+    grid-auto-flow: row;
+    align-content: center;
+    min-height: 100vh;
+    transition: .7s ease;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header h1 {
+    margin: 0;
+  }
+
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+    height: 10vh;
+    font-size: 1rem;
+  }
+
+  header.a {
+    font-size: 1.3rem;
+  }
+
+  header.visible {
+    transform: translateY(0);
+  }
+
+  main {
+    padding: 2rem;
+  }
 }

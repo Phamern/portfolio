@@ -5,34 +5,12 @@
   position: relative;
   background: white;
   margin-bottom: 30px;
-  width: 350px;
+  min-width: 350px;
 }
 
-
-
-/*
-
-Mulig løsning for animering av projekter til fullscreen.
-
-.project.active {
-  position: absolute;
-  animation: zoomIn .4s ease;
-  top: 0;
-  left: 0;
-  min-height: 100vh;
-  min-width: 100vw;
-  z-index: 1;
+.byline{
+  margin-bottom: 1rem;
 }
-
-@keyframes zoomIn {
-  from {
-    transform: scale(0, 0);
-  }
-
-  to {
-    transform: scale(100vw, 100vh);
-  }
-} */
 
 .add {
   position: fixed;
@@ -63,3 +41,37 @@ Mulig løsning for animering av projekter til fullscreen.
 .project img {
   width: 100%;
 }
+
+@media (max-width: 1000px) {
+  .project {
+    min-width: 100vh;
+  }
+}
+
+
+
+
+
+/*
+
+Mulig løsning for animering av projekter til fullscreen.
+
+.project.active {
+  position: absolute;
+  animation: zoomIn .4s ease;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: 1;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0, 0);
+  }
+
+  to {
+    transform: scale(100vw, 100vh);
+  }
+} */

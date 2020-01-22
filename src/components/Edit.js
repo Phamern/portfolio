@@ -79,6 +79,18 @@ const Edit = props => {
           value={project.title}
           placeholder="Title"
         />
+        <input 
+          onChange={updateValue}
+          name='year'
+          value={project.year}
+          placeholder='year'
+          />
+        <input 
+          onChange={updateValue}
+          name='byline'
+          value={project.byline}
+          placeholder='byline'
+          />
         <p>Description: </p>
         <textarea
           onChange={updateValue}
@@ -86,12 +98,6 @@ const Edit = props => {
           value={project.description}
           placeholder="description"
         />
-        <p>Color: </p>
-        <input 
-          onChange={updateValue}
-          name='color'
-          value={project.color}
-          />
         {
           project.defaultImage &&
           <img src={project.defaultImage} alt='image' />

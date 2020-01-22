@@ -100,7 +100,7 @@ const Edit = props => {
         />
         {
           project.defaultImage &&
-          <img src={project.defaultImage} alt='image' />
+          <img src={project.defaultImage} alt='project display' />
         }
         <label>
           <div className='uploadButton'>

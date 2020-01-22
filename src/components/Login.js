@@ -32,7 +32,7 @@ const Login = (props) => {
         <p>Welcome {firebase.auth().currentUser.displayName}</p>
         {
           firebase.auth().currentUser.photoURL &&
-          <img alt='profile image' src={firebase.auth().currentUser.photoURL} />
+          <img alt='profile display' src={firebase.auth().currentUser.photoURL} />
         }
         <button onClick={logout} >Sign Out</button>
         </>

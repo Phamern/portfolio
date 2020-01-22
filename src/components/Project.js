@@ -3,7 +3,6 @@ import './Project.css'
 import firebase from './firebase'
 import { IoMdTrash, IoIosCode } from 'react-icons/io'
 import { Link } from '@reach/router'
-import parse from 'html-react-parser'
 
 const Project = (props) => {
 

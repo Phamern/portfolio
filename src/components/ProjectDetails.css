@@ -5,3 +5,7 @@ img {
 .description {
   width: 40vw;
 }
+
+main.project-details {
+  justify-content: start;
+}

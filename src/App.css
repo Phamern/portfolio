@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Eczar&display=swap');
+@import url("https://use.typekit.net/tsd0bbh.css");
 
 * {
   box-sizing: border-box
@@ -7,14 +9,11 @@
 body, html {
   margin: 0;
   padding: 0;
-  font-family: 'Josefin sans';
-}
-
-h1 {
-  display: grid;
-  justify-content: center;
-  font-size: 1.2rem;
-  font-weight: 100;
+  /* font-family: 'eskapade-fraktur', serif; */
+  /* font-family: 'Eczar', serif; */
+  font-family: 'Josefin sans', sans-serif;
+  background-color: #0a0a0a;
+  color: white;
 }
 
 main {
@@ -23,6 +22,16 @@ main {
   place-items: center;
   align-content: center;
   padding: 20vh;
+  scroll-snap-type-y: mandatory; 
+
+
+}
+
+h1 {
+  display: grid;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 100;
 }
 
 button {
@@ -57,5 +66,5 @@ main h1 {
 }
 
 a {
-  color: black;
+  color: #0a0a0a;
 }

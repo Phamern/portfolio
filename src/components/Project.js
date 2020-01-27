@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Project.css'
+import './LandingPage.css'
 import firebase from './firebase'
 import { IoMdTrash, IoIosCode } from 'react-icons/io'
-import { Link } from '@reach/router'
+import { Link, navigate } from '@reach/router'
 
 const Project = (props) => {
 
-  const [activeProject, setActiveProject] = useState(false)
+  // const [activeProject, setActiveProject] = useState(false)
+  // onClick={ () => setActiveProject(!activeProject)} className={activeProject ? 'project active' : 'project'}
 
   const removeProject = () => {
     if(window.confirm('sure?')) {
@@ -20,18 +22,23 @@ const Project = (props) => {
   }
 
   return (
-    <div onClick={ () => setActiveProject(!activeProject)} className={activeProject ? 'project active' : 'project'}>
+    <>
+    <h3 className='display-title'>{props.data.title}</h3>
+    <div className='project'>
       {
         props.data.defaultImage && 
-      <img src={props.data.defaultImage} alt='default' />
+      <img  
+        onClick={() => navigate('/projects/' + props.id)} 
+        src={props.data.defaultImage} alt='default' 
+      />
       }
       <h3>{props.data.title}</h3>
-        <div className='year'>
+        {/* <div className='year'>
           {props.data.year}
         </div>
         <div className='byline'>
           {props.data.byline}
-        </div>
+        </div> */}
         <Link to={'/projects/' + props.id}>See project</Link>
       {
         props.signedIn &&
@@ -43,6 +50,7 @@ const Project = (props) => {
       </div>
       }
     </div>
+    </>
   )
 }
 

@@ -4,16 +4,16 @@ import { Router, navigate } from '@reach/router'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Header from './components/Header'
-import Cv from './components/Cv'
 import Login from './components/Login'
 import firebase from './components/firebase'
 import Edit from './components/Edit'
 import ProjectDetails from './components/ProjectDetails'
+import LandingPage from './components/LandingPage'
 
 const App = () => {
 
   const Default = () => {
-    navigate('/projects')
+    navigate('/home')
     return(
       <>
       </>
@@ -39,10 +39,10 @@ const App = () => {
       <Header signedIn={signedIn} />
       <Router>
         <Default path='/' />
+        <LandingPage path='/home' />
         <Projects path='/projects' signedIn={signedIn} />
         <ProjectDetails path='/projects/:id'/>
-        <Contact path='/contact' />
-        <Cv path='/cv' />
+        <Contact path='/about' />
         <Login signedIn={signedIn} setSignedIn={setSignedIn} path='/login' />
         <Edit path='/edit/:id' />
       </Router>

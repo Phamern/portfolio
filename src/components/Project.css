@@ -3,9 +3,12 @@
   padding: 2rem;
   box-shadow: rgba(0, 0, 0, .2) 1px 3px 6px;
   position: relative;
-  background: white;
+  background: #0a0a0a;
   margin-bottom: 30px;
   min-width: 350px;
+  color: #0a0a0a;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
 .byline{
@@ -41,6 +44,12 @@
 .project img {
   width: 100%;
 }
+
+h3 {
+  font-family: 'eskapade-fraktur', serif;
+}
+
+
 
 @media (max-width: 1000px) {
   .project {

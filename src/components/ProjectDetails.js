@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './ProjectDetails.css'
 import firebase from './firebase'
 import parse from 'html-react-parser'
+import { Link } from '@reach/router'
 
 const ProjectDetails = (props) => {
 
@@ -15,14 +16,17 @@ const ProjectDetails = (props) => {
     .onSnapshot(
       snapshot => setProject(snapshot.data())
     )
-  }, [])
+  }, [props.id])
 
   return (
-    <main>
+    <main className='project-details'>
       {
         project 
         ?
         <div>
+          <p>
+            <Link to='/projects'>Back</Link>
+          </p>
           {
             project.defaultImage && 
           <img src={project.defaultImage} alt='default' />

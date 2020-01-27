@@ -1,0 +1,74 @@
+
+.introPage {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: start;
+  align-content: start;
+  /* grid-template-rows: minmax(50px, 50px);*/
+  /* justify-content: center;
+  align-items: center; */
+  padding-left: 12rem;
+  padding-top: 15rem;
+}
+
+.introPage h1 {
+  color: #fff;
+  font-size: 4.5rem;
+  justify-content: start;
+  font-family: 'eskapade-fraktur', serif;
+  /* font-family: 'jaf-lapture-subhead', serif; */
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20vh;
+}
+
+.introPage p {
+  color: #fff;
+  font-family: 'Josefin sans', sans-serif;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 40vh;
+}
+
+.project-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.project-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+
+.project-landing-page {
+  min-height: 350px;
+  padding: 8rem;
+  box-shadow: rgba(0, 0, 0, .2) 1px 3px 6px;
+  position: relative;
+  background: #0a0a0a;
+  margin-bottom: 30px;
+  min-width: 350px;
+  color: #fff;
+}
+
+.project-landing-page img {
+  width: 80%;
+}
+
+.display-title {
+  font-size: 2rem;
+  /* position: absolute; */
+  top: 80;
+  z-index: 5;
+}
+
+h3 {
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}

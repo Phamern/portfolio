@@ -17,8 +17,8 @@ header {
   width: 100vw;
   height: 10vh;
   display: grid;
-  grid-auto-flow:  column;
-  justify-content: flex-start;
+  grid-template-columns:  1fr 1fr;
+  justify-content: start;
   align-items: center;
   gap: 1rem;
   z-index: 1;
@@ -28,12 +28,23 @@ header {
 header h1 {
   color: #fff;
   font-family: 'eskapade-fraktur', serif;
+  justify-content: start;
+}
+
+.header-right-items {
+  display: grid;
+  grid-auto-flow: column;
+  place-content: end;
+  gap: 1rem;
+  margin-right: 2rem;
+  align-items: center;
 }
 
 header a {
   text-decoration: none;
   color: #fff;
   font-family: 'eskapade-fraktur', serif;
+  justify-items: end;
 }
 
 header h1 {

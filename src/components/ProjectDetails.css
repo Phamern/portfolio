@@ -7,5 +7,29 @@ img {
 }
 
 main.project-details {
-  justify-content: start;
+  justify-content: center;
+  padding: 10vh;
+}
+
+.pager {
+  position: relative;
+  background: #0a0a0a;
+  text-decoration: none;
+  width: 70vw;
+  margin-top: 10vh;
+  display: grid;
+  grid-auto-flow: column;
+  z-index: 5;
+}
+
+.prev {
+  position: absolute;
+  left: -5vw;
+  bottom: -2vh;
+}
+
+.next {
+  position: absolute;
+  right: -5vw;
+  bottom: -2vh;
 }

@@ -9,6 +9,7 @@
 body, html {
   margin: 0;
   padding: 0;
+  width: 100vw;
   /* font-family: 'eskapade-fraktur', serif; */
   /* font-family: 'Eczar', serif; */
   font-family: 'Josefin sans', sans-serif;
@@ -19,12 +20,11 @@ body, html {
 main {
   min-height: 100vh;
   display: grid;
+  max-width: 100vw;
   place-items: center;
   align-content: center;
-  padding: 20vh;
-  scroll-snap-type-y: mandatory; 
-
-
+  /* padding: 20vh; */
+  scroll-snap-type: y mandatory;
 }
 
 h1 {
@@ -47,6 +47,8 @@ button {
   display: grid;
   place-items: center;
   font-size: .6rem;
+  background-color: #0a0a0a;
+  border: 1px solid #fff
 }
 
 main h1 {
@@ -67,4 +69,5 @@ main h1 {
 
 a {
   color: #0a0a0a;
+  text-decoration: none;
 }

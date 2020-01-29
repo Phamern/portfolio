@@ -43,9 +43,9 @@
   color: #fff;
 }
 
-/* .project img {
-  width: 100%;
-} */
+.project img {
+  width: 30vw;
+}
 
 h3 {
   font-family: 'eskapade-fraktur', serif;

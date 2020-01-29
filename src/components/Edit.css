@@ -26,7 +26,6 @@ textarea {
 .project-images > div {
   position: relative;
   display: grid;
-  place-items: center;
 
 }
 
@@ -37,9 +36,8 @@ textarea {
 }
 
 .imageNameIndicator {
-  position: absolute;
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 select {

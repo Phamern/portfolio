@@ -137,22 +137,22 @@ const Edit = props => {
             {
               project.defaultImage &&
               <div>
-                <img src={project.defaultImage} alt='default' />
                 <p className='imageNameIndicator'>Default</p>
+                <img src={project.defaultImage} alt='default' />
               </div>
             }
             {
               project.displayImage &&
               <div>
-                <img src={project.displayImage} alt='display' />
                 <p className='imageNameIndicator'>Display</p>
+                <img src={project.displayImage} alt='display' />
               </div>
             }
             {
               project.parallaxImage &&
               <div>
-                <img src={project.parallaxImage} alt='parallaxImage' />
                 <p className='imageNameIndicator'>Parallax Image</p>
+                <img src={project.parallaxImage} alt='parallaxImage' />
               </div>
             }
            </div>

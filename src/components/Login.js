@@ -3,6 +3,15 @@ import firebase from './firebase'
 
 const Login = (props) => {
 
+  const styles = {
+    loginImage: {
+      width: '100px',
+      borderRadius: '50%',
+      marginBottom: '3rem',
+      marginTop: '2rem'
+    }
+  }
+
   const loginWithGoogle = () => {
     let provider = new firebase.auth.GoogleAuthProvider()
     provider.addScope('profile')
@@ -32,7 +41,7 @@ const Login = (props) => {
         <p>Welcome {firebase.auth().currentUser.displayName}</p>
         {
           firebase.auth().currentUser.photoURL &&
-          <img alt='profile display' src={firebase.auth().currentUser.photoURL} />
+          <img style={styles.loginImage} alt='profile display' src={firebase.auth().currentUser.photoURL} />
         }
         <button onClick={logout} >Sign Out</button>
         </>

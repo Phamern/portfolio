@@ -4,7 +4,9 @@ import firebase from './firebase'
 import parse from 'html-react-parser'
 import { Link } from '@reach/router'
 
+
 const ProjectDetails = (props) => {
+
 
   const [project, setProject] = useState()
   const [prev, setPrev] = useState()
@@ -90,3 +92,4 @@ const ProjectDetails = (props) => {
 }
 
 export default ProjectDetails
+  

@@ -1,62 +1,18 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './LandingPage.css'
-import firebase from './firebase'
-import Project from './Project'
-// import { IoMdAdd } from 'react-icons/io'
-// import { navigate } from '@reach/router'
-import PulseLoader from 'react-spinners/PulseLoader'
-import Masonry from 'react-masonry-css'
 
 const LandingPage = (props) => {
 
-  const [projects, setProjects] = useState([])
-    
-      useEffect( () => {
-        firebase
-        .firestore()
-        .collection('projects')
-        .orderBy('title')
-        .onSnapshot(
-          snapshot => setProjects(snapshot.docs)
-        )
-      }, [])
-
   return(
-    <>
-    <div className='introPage'>
-      <h1>eivind pham</h1>
-      <p>Digital Designer based in Oslo, Norway</p>
-    </div>
         <main>
-            {
-              projects.length > 0
-              ?
-              <Masonry
-                breakpointCols = {
-                  {
-                    default: 1,
-                  }
-                }
-                className="project-grid"
-                columnClassName="project-grid_column"
-              >
-              
-                {
-                  projects.map(
-                  project => 
-                  <Project 
-                    key={project.id}
-                    id={project.id}
-                    data={project.data()}
-                    signedIn={props.signedIn}/>
-                  )
-                }
-              </Masonry>
-              :
-              <PulseLoader />
-            }
+          <div className='introPage'>
+            <h1 className='name'>eivind pham | projects</h1>
+            <p>Fonts</p>
+            <p>Tåke Magazine</p>
+            <p>Menudo</p>
+            <p>Jakten på Vermeer</p>
+          </div>
         </main>
-        </>
       )
     }
 

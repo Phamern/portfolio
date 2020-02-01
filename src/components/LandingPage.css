@@ -1,12 +1,9 @@
 
 .introPage {
-  height: 100vh;
-  width: 100vw;
   display: grid;
   place-items: start;
   align-content: start;
-  padding-left: 10vw;
-  padding-top: 15vh;
+  margin-left: 10rem;
 }
 
 .introPage h1 {
@@ -14,23 +11,18 @@
   font-size: 4rem;
   justify-content: start;
   font-family: 'eskapade-fraktur', serif;
-  /* position: -webkit-sticky;
-  position: sticky; */
-  top: 20vh;
 }
 .introPage p{
   color: #fff;
-  font-size: 4rem;
+  font-size: 2rem;
   justify-content: start;
   font-family: 'eskapade-fraktur', serif;
-  /* position: -webkit-sticky;
-  position: sticky; */
-  top: 20vh;
   padding-top: 1rem;
 }
 
 .introPage .name {
-  color: rgb(133, 12, 12);
+  color: #fff;
+  /* color: rgb(133, 12, 12); */
   font-size: 5rem;
 }
 
@@ -51,4 +43,10 @@ h3 {
 
 a {
   color: #fff;
+}
+
+@media (max-width: 1000px) {
+  .introPage p {
+    font-size: 2.5rem;
+  }
 }

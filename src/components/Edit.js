@@ -132,6 +132,13 @@ const Edit = props => {
             value={project.description}
             placeholder="description"
           />
+          <p>Concept: </p>
+          <textarea
+            onChange={updateValue}
+            name="concept"
+            value={project.concept}
+            placeholder="concept"
+          />
 
           <div className='project-images'>
             {

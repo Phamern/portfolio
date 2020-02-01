@@ -1,36 +1,105 @@
-
-img {
-  width: 70vw;
+.project-details {
+  padding: 5rem 15rem;
 }
 
-.description {
+.project-details .project-details-content {
+ display: grid;
+ align-items: center;
+ justify-content: center;
+ gap: 2rem;
+}
+
+.project-details .project-details-content .back-button {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 15vh;
+  left: 10vw;
+  transition: .3s ease;
+  opacity: 0.5;
+}
+
+.project-details .project-details-content .back-button:hover {
+  position: absolute;
+  top: 15vh;
+  left: 10vw;
+  opacity: 1;
+  transform: translateX(-2px);
+}
+
+.project-details .project-details-content .info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.project-details .project-details-content .project-detail-title {
+  font-size: 4rem;
+  font-family: 'eskapade-fraktur', serif;
+}
+
+.project-details-content .description {
   width: 40vw;
+  margin-bottom: 5rem;
 }
 
-main.project-details {
-  justify-content: center;
-  padding: 10vh;
+.project-details-content img{
+  width: 100%;
+  box-shadow:  0px 10px 30px -5px rgba(0, 0, 0, .3);
 }
 
 .pager {
-  position: relative;
-  background: #0a0a0a;
+  /* position: relative; */
+  background: #161616;
   text-decoration: none;
-  width: 70vw;
+  width: 100vw;
+  height: 10vh;
   margin-top: 10vh;
   display: grid;
   grid-auto-flow: column;
   z-index: 5;
 }
 
-.prev {
-  position: absolute;
-  left: -5vw;
-  bottom: -2vh;
+.pager .navigate-projects {
+  display: grid;
+  grid-auto-flow: column;
+  place-content: end;
+  gap: 1rem;
+  margin-bottom: 4rem;
 }
 
-.next {
-  position: absolute;
-  right: -5vw;
-  bottom: -2vh;
+.navigate-projects .prev {
+  margin-left: 4rem;
+  font-size: .9rem;
+  justify-self: end;
+  opacity: 0.5;
+  transition: .3s ease;
 }
+
+.navigate-projects .divider {
+  opacity: 0.5;
+}
+
+.navigate-projects .next {
+  margin-right: 4rem;
+  font-size: .9rem;
+  justify-self: end;
+  opacity: 0.5;
+  transition: .3s ease;
+}
+
+.navigate-projects .prev:hover {
+  opacity: 1;
+  transform: translateX(-2px);
+}
+
+.navigate-projects .next:hover {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+@media (max-width: 700px) {
+  .project-details {
+    display: grid;
+    justify-content: center;
+    padding: 0 5rem;
+  }
+} 

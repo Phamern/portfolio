@@ -5,7 +5,6 @@ import Project from './Project'
 import { IoMdAdd } from 'react-icons/io'
 import { navigate } from '@reach/router'
 import PulseLoader from 'react-spinners/PulseLoader'
-import Masonry from 'react-masonry-css'
 
 const Projects = (props) => {
 
@@ -32,7 +31,7 @@ const Projects = (props) => {
   }
 
   return (
-    <main>
+    <>
         { props.signedIn &&
             <div className='add'>
                 <IoMdAdd className='icons' onClick={addProject} />
@@ -42,18 +41,7 @@ const Projects = (props) => {
         {
           projects.length > 0
           ?
-          <Masonry
-            breakpointCols = {
-              {
-                default: 3,
-                1300: 2,
-                1100: 1
-              }
-            }
-            className="my-masonry-grid"
-            columnClassName="my-masonry-grid_column"
-          >
-          
+          <>
             {
               projects.map(
               project => 
@@ -64,12 +52,12 @@ const Projects = (props) => {
                 signedIn={props.signedIn}/>
               )
             }
-          </Masonry>
+            </>
           :
           <PulseLoader />
         }
 
-    </main>
+    </>
   )
 }
 

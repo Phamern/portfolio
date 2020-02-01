@@ -1,39 +1,61 @@
+
 .project {
-  min-height: 350px;
-  padding: 2rem;
-  box-shadow: rgba(0, 0, 0, .2) 1px 3px 6px;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  gap: 2rem;
+  height: 100vh;
   position: relative;
-  background: #0a0a0a;
-  margin-bottom: 30px;
-  min-width: 350px;
-  color: #0a0a0a;
+  width: 100vw;
+  color: #161616;
+  padding: 10vh 10rem;
   scroll-snap-align: center;
-  scroll-snap-stop: always;
+  scroll-snap-stop: normal;
 }
 
-.byline{
+.project:nth-child(even) .project-info {
+  grid-row-start: 1;
+}
+
+.project .byline{
   margin-bottom: 1rem;
 }
 
-.add {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  right: 3vw;
-  top: 80vh;
-  border-radius: 50%;
-  background: #0a0a0a;
-  border: 2px solid #fff;
-  display: grid;
-  place-items: center;
-  box-shadow: rgba(0, 0, 0, .4) 1px 3px 10px;
-  z-index: 5;
+.project .project-overview-img {
+  width: 80%;
+  height: auto;
+  object-fit:cover;
+  align-self: center;
+  box-shadow:  0px 10px 30px -5px rgba(0, 0, 0, .3);
+  cursor: pointer;
 }
 
-.admin-icons {
+.project .display-title {
+  font-family: 'eskapade-fraktur', serif;
   position: absolute;
-  right: 2rem;
-  bottom: 1rem;
+  font-size: 8rem;
+  color: #fff;
+  top: 15vh;
+  left: 5vw;
+}
+
+.project .view-project {
+  position: absolute;
+  top: 81vh;
+  right: 10vw;
+  opacity: 0.5;
+  transition: .3s ease;
+}
+
+.project .view-project:hover {
+  opacity: 1;
+  transform: translateX(2px);
+}
+
+.project .admin-icons {
+  position: absolute;
+  right: 5vw;
+  bottom: 5vh;
   display: grid;
   grid-auto-flow: column;
   justify-content: end;
@@ -43,18 +65,16 @@
   color: #fff;
 }
 
-.project img {
-  width: 30vw;
-}
+@media (max-width: 900px) {
+  /* .project {
+    max-width: 100vh;
+  } */
 
-h3 {
-  font-family: 'eskapade-fraktur', serif;
-}
-
-
-
-@media (max-width: 1000px) {
-  .project {
-    min-width: 100vh;
+  .project .display-title {
+    font-size: 4rem;
+    color: #fff;
+    top: 15rem;
+    left: 0;
   }
+
 }

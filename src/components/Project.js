@@ -4,8 +4,14 @@ import './LandingPage.css'
 import firebase from './firebase'
 import { IoMdTrash, IoIosCode } from 'react-icons/io'
 import { Link, navigate } from '@reach/router'
+import { useSpring, animated } from 'react-spring'
+
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 200, (x - window.innerWidth / 2) / 200, 1.1]
+const trans = (x, y, s) => `perspective(800px) rotateX(${x}deg) rotateY(${y}deg)`
 
 const Project = (props) => {
+
+  const [animation, setAnimation] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 50, tension: 350, friction: 40 } }))
 
   // const [activeProject, setActiveProject] = useState(false)
   // onClick={ () => setActiveProject(!activeProject)} className={activeProject ? 'project active' : 'project'}
@@ -22,24 +28,20 @@ const Project = (props) => {
   }
 
   return (
-    <>
-    <h3 className='display-title'>{props.data.title}</h3>
     <div className='project'>
       {
         props.data.defaultImage && 
-      <img  
-        onClick={() => navigate('/projects/' + props.id)} 
-        src={props.data.defaultImage} alt='default' 
-      />
+        <animated.img 
+          className="project-overview-img"
+          onMouseMove={({ clientX: x, clientY: y }) => setAnimation({ xys: calc(x, y) })}
+          onMouseLeave={() => setAnimation({ xys: [0, 0, 1] })}
+          style={{ transform: animation.xys.interpolate(trans) }}
+          onClick={() => navigate('/projects/' + props.id)} 
+          src={props.data.defaultImage} alt='default' 
+        />
       }
-      <h3>{props.data.title}</h3>
-        {/* <div className='year'>
-          {props.data.year}
-        </div>
-        <div className='byline'>
-          {props.data.byline}
-        </div> */}
-        <Link to={'/projects/' + props.id}>See project</Link>
+        <div className='display-title'>{props.data.title}</div>
+        <Link className='view-project' to={'/projects/' + props.id}>View project</Link>
       {
         props.signedIn &&
       <div className='admin-icons'>
@@ -50,7 +52,6 @@ const Project = (props) => {
       </div>
       }
     </div>
-    </>
   )
 }
 

@@ -1,41 +1,42 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Eczar&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Eczar&display=swap");
 @import url("https://use.typekit.net/tsd0bbh.css");
 
+/* Default settings */
+
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
-  max-width: 100vw;
-  min-height: 100vh;
-  font-family: 'Josefin sans', sans-serif;
-  background-color: #0a0a0a;
+  font-family: "Roboto", sans-serif;
+  background-color: #161616;
   color: #fff;
+  scroll-snap-type: y mandatory;
 }
 
 main {
   min-height: 100vh;
   display: grid;
-  max-width: 100vw;
-  place-items: center;
-  align-content: center;
-}
+  width: 100vw;
+  padding: 10vh 0;
+ }
 
 h1 {
-  font-family: 'eskapade-fraktur', serif;
+  font-family: "eskapade-fraktur", serif;
   display: grid;
   justify-content: center;
   font-size: 1.2rem;
   font-weight: 100;
-  color: white;
+  color: #fff;
   margin-bottom: 1rem;
 }
 
 p {
-  font-family: 'Josefin sans', sans-serif;
+  font-family: "Josefin sans", sans-serif;
 }
 
 a {
@@ -47,15 +48,15 @@ button {
   width: 150px;
   height: 50px;
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, .2) 1px 1px 2px;
-  font-family: 'Josefin sans';
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 2px;
+  font-family: "Josefin sans";
   text-transform: uppercase;
   padding: 20px;
   cursor: pointer;
   display: grid;
   place-items: center;
-  font-size: .6rem;
-  background-color: #0a0a0a;
+  font-size: 0.6rem;
+  background-color: #161616;
   border: 1px solid #fff;
   color: #fff;
 }

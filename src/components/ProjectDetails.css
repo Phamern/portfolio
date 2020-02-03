@@ -62,21 +62,12 @@
   animation-fill-mode: backwards;
 }
 
-/* .project-details .project-details-content .info-grid .vertical-separator {
-  height: 10rem;
-  width: 1px;
-  background-color: #fff;
-  margin: 0 2rem;
-  animation: fadeIn 1.5s ease .75s;
-  animation-fill-mode: backwards;
-} */
-
 .project-details-content .description {
   width: 100%;
   margin-bottom: 5rem;
   padding-right: 2rem;
   font-family: "Eczar", serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   animation: fadeIn 1.5s ease .75s;
   animation-fill-mode: backwards;
 }
@@ -184,5 +175,37 @@
 
   .project-details .project-details-img-parallax {
     width: 100%
+  }
+
+  .pager {
+    justify-content: center;
+  }
+
+  .pager .navigate-projects {
+    display: grid;
+    grid-auto-flow: column;
+    place-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+  }
+  
+  .navigate-projects .prev {
+    margin-left: 4rem;
+    font-size: .9rem;
+    justify-self: center;
+    opacity: 0.5;
+    transition: .3s ease;
+  }
+  
+  .navigate-projects .divider {
+    opacity: 0.5;
+  }
+  
+  .navigate-projects .next {
+    margin-right: 4rem;
+    font-size: .9rem;
+    justify-self: center;
+    opacity: 0.5;
+    transition: .3s ease;
   }
 } 

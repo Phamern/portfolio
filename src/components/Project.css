@@ -9,10 +9,6 @@
   scroll-snap-stop: normal;
 }
 
-/* .project:nth-child(even) .project-info {
-  grid-row-start: 1;
-} */
-
 .project .byline{
   margin-bottom: 1rem;
 }
@@ -29,13 +25,12 @@
 
 .project .display-title {
   font-family: 'Yeseva One', cursive;
-  /* font-family: "Eczar", serif; */
   position: absolute;
   font-size: 5rem;
   color: #fff;
   top: 25vh;
   left: 10vw;
-  width: 5rem;
+  width: 20%;
 }
 
 .project .view-project {
@@ -75,8 +70,7 @@
     width: 100%;
   }
   .project .display-title {
-    font-size: 3rem;
-    color: #fff;
+    font-size: 2.5rem;
   }
 
 }

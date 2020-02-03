@@ -93,7 +93,7 @@ const Edit = props => {
   return (
     <main className='edit'>
        <div>
-        <Link className='back-button' to='/projects'>
+        <Link className='back-button' to={process.env.PUBLIC_URL + '/projects'}>
           <MdKeyboardBackspace className='back-icon'/>
         </Link>
         </div>
@@ -215,7 +215,7 @@ const Edit = props => {
           </label>
         </form>
         <button onClick={submitChanges}>
-            <Link to='/'>
+            <Link to={process.env.PUBLIC_URL + '/'}>
             Submit Changes
             </Link>
           </button>

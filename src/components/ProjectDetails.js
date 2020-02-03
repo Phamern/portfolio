@@ -48,14 +48,14 @@ const ProjectDetails = (props) => {
         ?
         <div className='project-details-content'>
             <div>
-              <Link className='back-button' to='/projects'>
+              <Link className='back-button' to={process.env.PUBLIC_URL + '/projects'}>
                 <MdKeyboardBackspace className='back-icon'/>
               </Link>
             </div>
             <div>
               {
                 props.signedIn &&
-                <Link className='edit-button' to={'/edit/' + props.id}>
+                <Link className='edit-button' to={process.env.PUBLIC_URL + '/edit/' + props.id}>
                   <IoIosCode />
                 </Link>
               }
@@ -118,9 +118,9 @@ const ProjectDetails = (props) => {
     {
       (prev && next) &&
       <div className='navigate-projects'>
-       <Link className='prev' to={'/projects/' + prev.id}>Previous project</Link>
+       <Link className='prev' to={process.env.PUBLIC_URL + '/projects/' + prev.id}>Previous project</Link>
        <div className='divider'>|</div>
-       <Link className='next' to={'/projects/' + next.id}>Next project</Link>
+       <Link className='next' to={process.env.PUBLIC_URL + '/projects/' + next.id}>Next project</Link>
       </div>
     }
   </div>

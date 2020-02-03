@@ -52,14 +52,20 @@ header {
   align-items: center;
 }
 
+.header-right-items .divider {
+  margin: 0;
+}
+
 [aria-current='page'], .active {
   font-weight: bold;
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
 
   .header-container {
     place-items: center;
+    background: #161616;
+    height: 12vh;
   }
    
   header {
@@ -79,8 +85,9 @@ header {
 
   .burger-menu {
     display: block;
-    cursor: pointer;
-    height: 10vh;
+    justify-self: end;
+    padding: 2rem;
+    height: 12vh;
   }
 
   header.a {
@@ -94,4 +101,4 @@ header {
   main {
     padding: 2rem;
   }
-}
+} */

@@ -36,16 +36,16 @@ const Project = (props) => {
           onMouseMove={({ clientX: x, clientY: y }) => setAnimation({ xys: calc(x, y) })}
           onMouseLeave={() => setAnimation({ xys: [0, 0, 1] })}
           style={{ transform: animation.xys.interpolate(trans) }}
-          onClick={() => navigate('/projects/' + props.id)} 
+          onClick={() => navigate(process.env.PUBLIC_URL + '/projects/' + props.id)} 
           src={props.data.defaultImage} alt='default' 
         />
       }
         <div className='display-title'>{props.data.title}</div>
-        <Link className='view-project' to={'/projects/' + props.id}>View project</Link>
+        <Link className='view-project' to={process.env.PUBLIC_URL + '/projects/' + props.id}>View project</Link>
       {
         props.signedIn &&
       <div className='admin-icons'>
-        <Link to={'/edit/' + props.id}>
+        <Link to={process.env.PUBLIC_URL + '/edit/' + props.id}>
           <IoIosCode />
         </Link>
         <IoMdTrash onClick={removeProject} />

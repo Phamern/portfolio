@@ -3,50 +3,60 @@
   display: grid;
   place-items: start;
   align-content: start;
-  margin-left: 10rem;
+  padding-left: 10rem;
 }
 
-.introPage h1 {
+.introPage .name-wrapper {
+  display: grid;
+  margin-top: 10rem;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+}
+
+.introPage .name-wrapper .name, .separator, .nav-projects {
   color: #fff;
   font-size: 4rem;
   justify-content: start;
-  font-family: 'eskapade-fraktur', serif;
+  font-family: 'Yeseva One', cursive;
+  font-family: "Eczar", serif;
+  transition: .1s;
 }
+
+.introPage .name-wrapper .nav-projects:hover {
+  transform: translateX(.5rem);
+  cursor: pointer;
+}
+
 .introPage p{
   color: #fff;
   font-size: 2rem;
   justify-content: start;
-  font-family: 'eskapade-fraktur', serif;
+  font-family: "Eczar", serif;
   padding-top: 1rem;
 }
 
-.introPage .name {
-  color: #fff;
-  /* color: rgb(133, 12, 12); */
-  font-size: 5rem;
-}
+@media (max-width: 800px) {
 
+  .introPage {
+    padding-left: 2rem;
+  }
 
-.introPage.name:hover {
-  transform: none;
-  cursor: pointer;
-}
+  .introPage .name-wrapper {
+    display: grid;
+    margin-top: 5rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 
-.introPage p:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
+  .introPage .name-wrapper .name{
+    font-size: 3rem;
+  }
+  .introPage .name-wrapper .separator, .nav-projects {
+    font-size: 2rem;
+    display: none;
+  }
 
-h3 {
-  color: #fff;
-}
-
-a {
-  color: #fff;
-}
-
-@media (max-width: 1000px) {
   .introPage p {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 }

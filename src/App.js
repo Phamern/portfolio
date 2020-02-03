@@ -15,6 +15,7 @@ const App = () => {
   const [signedIn, setSignedIn] = useState(false)
 
   useEffect( () => {
+    console.log('use effect')
     firebase.auth().onAuthStateChanged(
       user => {
         if(user) {
@@ -27,7 +28,7 @@ const App = () => {
   })
 
   return (
-    <>
+    <div>
       <Header signedIn={signedIn} />
       <Router basepath={process.env.PUBLIC_URL}>
         <LandingPage default path='/home' />
@@ -37,7 +38,7 @@ const App = () => {
         <Login signedIn={signedIn} setSignedIn={setSignedIn} path='/login' />
         <Edit path='/edit/:id' />
       </Router>
-    </>
+    </div>
   )
 }
 

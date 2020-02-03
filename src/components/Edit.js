@@ -135,9 +135,9 @@ const Edit = props => {
             />
           <input 
             onChange={updateValue}
-            name='contributors'
-            value={project.contributors}
-            placeholder='contributors'
+            name='client'
+            value={project.client}
+            placeholder='client'
             />
           <input 
             onChange={updateValue}
@@ -216,7 +216,7 @@ const Edit = props => {
         </form>
         <button onClick={submitChanges}>
             <Link to={process.env.PUBLIC_URL + '/'}>
-            Submit Changes
+              Submit Changes
             </Link>
           </button>
         <p>{status}</p>

@@ -64,16 +64,18 @@
   color: #fff;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .project {
     max-width: 100vh;
     padding:0;
+    scroll-snap-align: none;
+    scroll-snap-stop: none;
   } 
   .project .project-overview-img {
     width: 100%;
   }
   .project .display-title {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #fff;
   }
 

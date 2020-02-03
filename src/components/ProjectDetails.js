@@ -68,7 +68,7 @@ const ProjectDetails = (props) => {
                   parse(project.description)
                 }
              </div>
-             <div className='vertical-separator'></div>
+             {/* <div className='vertical-separator'></div> */}
              <div className='project-list-info'>
                <div className='list-info-items'>
                 <p className='tagName'>Type</p>
@@ -83,8 +83,8 @@ const ProjectDetails = (props) => {
                 <div className='year'>{project.tech}</div>
                </div>
                <div className='list-info-items'>
-                <p className='tagName'>Contributors</p>
-                <div className='year'>{project.contributors}</div>
+                <p className='tagName'>Client</p>
+                <div className='year'>{project.client}</div>
                </div>
              </div>
             </div>

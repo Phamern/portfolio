@@ -11,15 +11,16 @@
   font-size: 1.3rem;
   text-decoration: none;
   color: #fff;
-  font-family: 'eskapade-fraktur', serif;
+  font-family: "Eczar", serif;
   justify-items: end;
 
 }
+
 .header-container header p {
   font-size: 1.3rem;
   font-weight: 100;
   color: #fff;
-  font-family: 'eskapade-fraktur', serif;
+  font-family: "Eczar", serif;
   justify-content: start;
   margin-left: 2rem;
   margin-right: 2rem;
@@ -58,6 +59,13 @@ header {
 
 [aria-current='page'], .active {
   font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .header-container header p {
+    font-size: 1rem;
+  }
+
 }
 
 /* @media (max-width: 1000px) {

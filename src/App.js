@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './App.css'
-import { Router, navigate } from '@reach/router'
+import { Router } from '@reach/router'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Header from './components/Header'
@@ -11,14 +11,6 @@ import ProjectDetails from './components/ProjectDetails'
 import LandingPage from './components/LandingPage'
 
 const App = () => {
-
-  const Default = () => {
-    navigate('/home')
-    return(
-      <>
-      </>
-    )
-  }
 
   const [signedIn, setSignedIn] = useState(false)
 
@@ -38,10 +30,9 @@ const App = () => {
     <>
       <Header signedIn={signedIn} />
       <Router>
-        <Default path='/' />
-        <LandingPage path='/home' />
+        <LandingPage default path='/home' />
         <Projects path='/projects' signedIn={signedIn} />
-        <ProjectDetails path='/projects/:id'/>
+        <ProjectDetails signedIn={signedIn} path='/projects/:id'/>
         <Contact path='/about' />
         <Login signedIn={signedIn} setSignedIn={setSignedIn} path='/login' />
         <Edit path='/edit/:id' />

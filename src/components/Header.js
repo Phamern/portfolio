@@ -26,16 +26,7 @@ const Header = ( props ) => {
           <Link getProps={isPartiallyActive} to='/projects'>projects</Link>
           <div>|</div>
           <Link to='/about'>about</Link>
-          <Link to='/login'>
-            
-            {/* Viser tekst hvis på
-            {
-              props.signedIn
-              ? 'profile'
-              : 'login'
-            } 
-            */}
-          </Link>
+          <Link to='/login'>login</Link>
         </div>
       </header>
     </div>

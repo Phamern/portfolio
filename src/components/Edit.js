@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import firebase from "./firebase"
 import "./Edit.css"
+import {MdKeyboardBackspace} from 'react-icons/md'
 import FileUploader from 'react-firebase-file-uploader'
 import { Link } from '@reach/router'
 
@@ -91,11 +92,22 @@ const Edit = props => {
 
   return (
     <main className='edit'>
+       <div>
+        <Link className='back-button' to='/projects'>
+          <MdKeyboardBackspace className='back-icon'/>
+        </Link>
+        </div>
       {
         project ?
         <>
         <h1>Edit Project : {project.title}</h1>
         <form onSubmit={saveProject}>
+          <input
+            onChange={updateValue}
+            name="orderNr"
+            value={project.orderNr}
+            placeholder="Order by number"
+          />
         <p>Title: </p>
           <input
             onChange={updateValue}
@@ -108,6 +120,24 @@ const Edit = props => {
             name='year'
             value={project.year}
             placeholder='year'
+            />
+          <input 
+            onChange={updateValue}
+            name='type'
+            value={project.type}
+            placeholder='type'
+            />
+          <input 
+            onChange={updateValue}
+            name='tech'
+            value={project.tech}
+            placeholder='tech'
+            />
+          <input 
+            onChange={updateValue}
+            name='contributors'
+            value={project.contributors}
+            placeholder='contributors'
             />
           <input 
             onChange={updateValue}

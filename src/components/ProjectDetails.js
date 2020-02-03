@@ -29,7 +29,7 @@ const ProjectDetails = (props) => {
     firebase
     .firestore()
     .collection('projects')
-    .orderBy('title')
+    .orderBy('orderNr')
     .get()
     .then( projects => {
       const array = projects.docs.map( doc => { return {id: doc.id, title: doc.data().title} })
@@ -56,7 +56,7 @@ const ProjectDetails = (props) => {
               {
                 props.signedIn &&
                 <Link className='edit-button' to={'/edit/' + props.id}>
-                  <IoIosCode></IoIosCode>
+                  <IoIosCode />
                 </Link>
               }
             </div>
@@ -68,7 +68,25 @@ const ProjectDetails = (props) => {
                   parse(project.description)
                 }
              </div>
-             <div className='year'>{project.year}</div>
+             <div className='vertical-separator'></div>
+             <div className='project-list-info'>
+               <div className='list-info-items'>
+                <p className='tagName'>Type</p>
+                <div className='year'>{project.type}</div>
+               </div>
+               <div className='list-info-items'>
+                <p className='tagName'>Date</p>
+                <div className='year'>{project.year}</div>
+               </div>
+               <div className='list-info-items'>
+                <p className='tagName'>Tech</p>
+                <div className='year'>{project.tech}</div>
+               </div>
+               <div className='list-info-items'>
+                <p className='tagName'>Contributors</p>
+                <div className='year'>{project.contributors}</div>
+               </div>
+             </div>
             </div>
             {
               project.parallaxImage && 

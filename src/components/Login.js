@@ -4,6 +4,10 @@ import firebase from './firebase'
 const Login = (props) => {
 
   const styles = {
+    login: {
+      placeItems: 'center'
+    },
+
     loginImage: {
       width: '100px',
       borderRadius: '50%',
@@ -29,7 +33,7 @@ const Login = (props) => {
   }
 
   return (
-    <main className='login'>
+    <main style={styles.login}>
       {
         !props.signedIn &&
         <button onClick={loginWithGoogle} >Sign in</button>

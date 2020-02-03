@@ -1,7 +1,7 @@
 
 .project {
   display: grid;
-  grid-template-columns: 1fr;
+  /* grid-template-columns: 1fr; */
   place-items: center;
   gap: 2rem;
   height: 100vh;
@@ -12,6 +12,23 @@
   scroll-snap-align: center;
   scroll-snap-stop: normal;
 }
+
+/* .project:hover {
+  animation: test 5s ease infinite;
+}
+
+@keyframes test {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+} */
 
 .project:nth-child(even) .project-info {
   grid-row-start: 1;
@@ -24,24 +41,27 @@
 .project .project-overview-img {
   width: 80%;
   height: auto;
-  object-fit:cover;
+  object-fit: cover;
   align-self: center;
+  justify-self: end;
   box-shadow:  0px 10px 30px -5px rgba(0, 0, 0, .3);
   cursor: pointer;
 }
 
 .project .display-title {
-  font-family: 'eskapade-fraktur', serif;
+  font-family: 'Yeseva One', cursive;
+  /* font-family: "Eczar", serif; */
   position: absolute;
-  font-size: 8rem;
+  font-size: 5rem;
   color: #fff;
-  top: 15vh;
-  left: 5vw;
+  top: 25vh;
+  left: 10vw;
+  width: 5rem;
 }
 
 .project .view-project {
   position: absolute;
-  top: 81vh;
+  top: 85vh;
   right: 10vw;
   opacity: 0.5;
   transition: .3s ease;

@@ -2,10 +2,14 @@ import React, { useState, useEffect } from 'react'
 import './ProjectDetails.css'
 import firebase from './firebase'
 import {MdKeyboardBackspace} from 'react-icons/md'
+import { IoIosCode } from 'react-icons/io'
 import parse from 'html-react-parser'
 import { Link } from '@reach/router'
+// import {useSpring, animated} from 'react-spring'
 
 const ProjectDetails = (props) => {
+
+  // const fadein = useSpring({opacity: 1, from: {opacity: 0}})
 
   const [project, setProject] = useState()
   const [prev, setPrev] = useState()
@@ -43,37 +47,50 @@ const ProjectDetails = (props) => {
         project 
         ?
         <div className='project-details-content'>
-            <p>
-              <Link className='back-button' to='/projects'><MdKeyboardBackspace className='back-icon'/></Link>
-            </p>
-            <h3 className='project-detail-title'>{project.title}</h3>
+            <div>
+              <Link className='back-button' to='/projects'>
+                <MdKeyboardBackspace className='back-icon'/>
+              </Link>
+            </div>
+            <div>
+              {
+                props.signedIn &&
+                <Link className='edit-button' to={'/edit/' + props.id}>
+                  <IoIosCode></IoIosCode>
+                </Link>
+              }
+            </div>
+            <div className='project-detail-title'>{project.title} </div>
             <div className='info-grid'>
-              <div className='year'> {project.year}</div>
               <div className='description'>
                 {
                   project.description &&
                   parse(project.description)
                 }
              </div>
+             <div className='year'>{project.year}</div>
             </div>
             {
-              project.defaultImage && 
-              <img 
-                class="project-details-img"
-                src={project.defaultImage} alt='default' 
-              />
+              project.parallaxImage && 
+            <img 
+              className="project-details-img-parallax"
+              src={project.parallaxImage} alt='parallax' /
+            >
             }
+            
              <div className='concept'>
                 {
                   project.concept &&
                   parse(project.concept)
                 }
              </div>
-            {
-              project.parallaxImage && 
-            <img src={project.parallaxImage} alt='parallax' />
-            }
-            
+             {/* {
+              project.defaultImage && 
+              <img 
+                className="project-details-img-default"
+                src={project.defaultImage} alt='default' 
+              />
+            } */}
         </div>
         :
         <h2>Fetching project, hold on</h2>

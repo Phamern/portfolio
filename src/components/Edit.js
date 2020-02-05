@@ -135,9 +135,21 @@ const Edit = props => {
             />
           <input 
             onChange={updateValue}
-            name='client'
-            value={project.client}
-            placeholder='client'
+            name='role'
+            value={project.role}
+            placeholder='role'
+            />
+          <input 
+            onChange={updateValue}
+            name='website'
+            value={project.website}
+            placeholder='website'
+            />
+          <input 
+            onChange={updateValue}
+            name='styleguide'
+            value={project.styleguide}
+            placeholder='styleguide'
             />
           <input 
             onChange={updateValue}
@@ -185,31 +197,23 @@ const Edit = props => {
               </div>
             }
             {
-              project.displayImage &&
+              project.introImage &&
               <div>
-                <p className='imageNameIndicator'>Display</p>
-                <img src={project.displayImage} alt='display' />
-              </div>
-            }
-            {
-              project.parallaxImage &&
-              <div>
-                <p className='imageNameIndicator'>Parallax Image</p>
-                <img src={project.parallaxImage} alt='parallaxImage' />
+                <p className='imageNameIndicator'>Intro Image</p>
+                <img src={project.introImage} alt='intro' />
               </div>
             }
             {
               project.resultImage &&
               <div>
                 <p className='imageNameIndicator'>Result Image</p>
-                <img src={project.resultImage} alt='resultImage' />
+                <img src={project.resultImage} alt='result' />
               </div>
             }
            </div>
           <select name='imageName' onChange={ e => setImageName(e.target.value)}>
             <option name='defaultImage' value='defaultImage'>Default Image</option>
-            <option name='displayImage' value='displayImage'>Display Image</option>
-            <option name='parallaxImage' value='parallaxImage'>Parallax Image</option>
+            <option name='introImage' value='introImage'>Intro Image</option>
             <option name='resultImage' value='resultImage'>Result Image</option>
           </select>
           <label>

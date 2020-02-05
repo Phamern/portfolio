@@ -99,7 +99,7 @@ section {
   font-weight: 300;
 }
 
-.project-details .project-details-img-parallax {
+.project-details .project-details-img-intro {
   box-shadow:  none;
   width: 70%;
   justify-self: center;
@@ -228,10 +228,11 @@ section {
   .project-details .project-details-content .info-grid {
     display: block;
     padding-left: 2rem;
+    padding-right: 1rem;
     margin-bottom: 3rem;
   }
 
-  .project-details .project-details-img-parallax {
+  .project-details .project-details-img-intro {
     width: 100%;
   }
 
@@ -245,7 +246,7 @@ section {
     margin-top: 2rem;
     font-family: "Eczar", serif;
     padding: 2rem;
-    text-align: justify;
+    text-align: left;
     grid-column: 1 / 3;
   }
   

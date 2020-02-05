@@ -83,17 +83,32 @@ const ProjectDetails = (props) => {
                   <div className='year'>{project.tech}</div>
                 </div>
                 <div className='list-info-items'>
-                  <p className='tagName'>Client</p>
-                  <div className='year'>{project.client}</div>
+                  <p className='tagName'>Role</p>
+                  <div className='year'>{project.role}</div>
+                </div>
+                { 
+                  project.website &&
+                  <div className='list-info-items'>
+                    <p className='tagName'>Website</p>
+                    <div className='year'>{parse(project.website)}</div>
+                  </div>
+                }
+                { 
+                  project.styleguide &&
+                  <div className='list-info-items'>
+                    <p className='tagName'>Styleguide</p>
+                    <div className='year'>{parse(project.styleguide)}</div>
+                  </div>
+                }
                 </div>
               </div>
-              </div>
             </section>
+            
             {
-              project.parallaxImage && 
+              project.introImage && 
             <img 
-              className="project-details-img-parallax"
-              src={project.parallaxImage} alt='parallax' /
+              className="project-details-img-intro"
+              src={project.introImage} alt='intro' /
             >
             }
             <section className='concept-section'>

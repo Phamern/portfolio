@@ -1,7 +1,16 @@
 .project-details {
   display: grid;
   grid-auto-flow: row;
-  padding: 10rem 15rem;
+  padding-top: 10rem;
+}
+
+section {
+  display: grid;
+  margin-bottom: 5rem;
+}
+
+.top-info-section {
+  padding: 0 15rem;
 }
 
 .project-details .project-details-content {
@@ -17,6 +26,7 @@
   transition: .3s ease;
   opacity: 0.5;
 }
+
 .project-details .project-details-content .back-button {
   position: absolute;
   font-size: 1.5rem;
@@ -37,9 +47,7 @@
 .project-details .project-details-content .info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-bottom: 5rem;
 }
-
 
 @keyframes fadeIn {
   from {
@@ -52,7 +60,6 @@
   }
 }
 
-
 .project-details .project-details-content .project-detail-title {
   font-size: 4rem;
   font-family: 'eskapade-fraktur', serif;
@@ -64,7 +71,6 @@
 
 .project-details-content .description {
   width: 100%;
-  margin-bottom: 5rem;
   padding-right: 2rem;
   font-family: "Eczar", serif;
   font-size: 1.3rem;
@@ -87,22 +93,63 @@
  justify-content: end;
 }
 
-.project-details-content .project-list-info .list-info-items .tagName{
+.project-details-content .project-list-info .list-info-items .tagName {
   font-family: 'Yeseva One', cursive;
- font-size: 1rem;
- font-weight: 300;
-}
-
-.project-details-content img{
-  width: 100%;
-  box-shadow:  0px 10px 30px -5px rgba(0, 0, 0, .3);
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .project-details .project-details-img-parallax {
   box-shadow:  none;
-  width: 80%;
+  width: 70%;
+  justify-self: center;
   animation: fadeIn 1.5s ease 1s;
   animation-fill-mode: backwards;
+}
+
+.project-details .project-details-img-result {
+  box-shadow:  none;
+  width: 100%;
+  animation: fadeIn 1.5s ease 1s;
+  animation-fill-mode: backwards;
+}
+
+.project-details .project-details-content .concept-section, .target-audience-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 15rem;
+  gap: 1rem;
+}
+
+
+.project-details .project-details-content .concept-section .concept-description .concept-title {
+  font-size: 4rem;
+  font-family: 'Yeseva One', cursive;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.project-details .project-details-content .concept-section .concept-name .concept-title {
+  font-size: 3rem;
+  font-family: 'Eczar', serif;
+  text-align: left;
+}
+
+.project-details .project-details-content .concept-section .concept-description, .concept-name {
+  font-size: 1.3rem;
+  margin-top: 10rem;
+  margin-bottom: 7rem;
+  font-family: "Eczar", serif;
+  text-align: justify;
+  justify-self: left;
+  padding-right: 5rem;
+  grid-column: 1 / 2;
+}
+
+.project-details .project-details-content .concept-section .concept-name {
+  grid-column: 2 / 3;
+  border-left: 1px solid #fff;
+  padding-left: 3rem;
 }
 
 .pager {
@@ -154,27 +201,66 @@
   transform: translateX(2px);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .project-details {
     justify-content: center;
     padding: 0;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  .top-info-section {
+    padding: 0;
+  }
+  .project-details-content .description {
+    margin-bottom: 3rem;
   }
 
   .project-details .project-details-content .project-detail-title {
     font-size: 3rem;
     padding-left: 2rem;
     margin-top: 7rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 
   .project-details .project-details-content .info-grid {
     display: block;
     padding-left: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
   }
 
   .project-details .project-details-img-parallax {
-    width: 100%
+    width: 100%;
+  }
+
+  .project-details .project-details-content .concept-section {
+    padding: 0;
+  }
+
+  .project-details .project-details-content .concept-section .concept-description {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-top: 2rem;
+    font-family: "Eczar", serif;
+    padding: 2rem;
+    text-align: justify;
+    grid-column: 1 / 3;
+  }
+  
+  .project-details .project-details-content .concept-section .concept-description, .concept-name {
+    padding-right: 2rem;
+    margin-bottom: 1rem;
+    grid-column: 1 / 3;
+  }
+
+  .project-details .project-details-content .concept-section .concept-name {
+    grid-column: 1 / 3;
+    border-left: 1px solid #fff;
+    padding-left: 2rem;
+    margin-left: 2rem;
+    margin-top: 0;
   }
 
   .pager {

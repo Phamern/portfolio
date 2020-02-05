@@ -3,12 +3,13 @@ import './Contact.css'
 
 const Contact = () => {
   return (
-    <main>
-      <h2>Contact</h2>
+    <main className='about'>
+      <div className='contact-title'>Contact</div>
       <div className='contactInfo'>
-        <h4>Eivind Madsen Pham</h4>
-        <h4>+47 908 96 870</h4>
-        <h4>eivindmpham@gmail.com</h4>
+        <div className='contact-name'>Eivind Madsen Pham</div>
+        <div className='contact-description'>I'm currently a designstudnet with passion for digital design and conceptual thinking</div>
+        <div className='contact-phone'>+47 908 96 870</div>
+        <div className='contact-email'>eivindmpham@gmail.com</div>
       </div>
     </main>
   )

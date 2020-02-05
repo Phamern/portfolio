@@ -60,33 +60,35 @@ const ProjectDetails = (props) => {
                 </Link>
               }
             </div>
-            <div className='project-detail-title'>{project.title} </div>
-            <div className='info-grid'>
-              <div className='description'>
-                {
-                  project.description &&
-                  parse(project.description)
-                }
-             </div>
-             <div className='project-list-info'>
-               <div className='list-info-items'>
-                <p className='tagName'>Type</p>
-                <div className='year'>{project.type}</div>
-               </div>
-               <div className='list-info-items'>
-                <p className='tagName'>Date</p>
-                <div className='year'>{project.year}</div>
-               </div>
-               <div className='list-info-items'>
-                <p className='tagName'>Tech</p>
-                <div className='year'>{project.tech}</div>
-               </div>
-               <div className='list-info-items'>
-                <p className='tagName'>Client</p>
-                <div className='year'>{project.client}</div>
-               </div>
-             </div>
-            </div>
+            <section className='top-info-section'>
+              <div className='project-detail-title'>{project.title} </div>
+              <div className='info-grid'>
+                <div className='description'>
+                  {
+                    project.description &&
+                    parse(project.description)
+                  }
+              </div>
+              <div className='project-list-info'>
+                <div className='list-info-items'>
+                  <p className='tagName'>Type</p>
+                  <div className='year'>{project.type}</div>
+                </div>
+                <div className='list-info-items'>
+                  <p className='tagName'>Date</p>
+                  <div className='year'>{project.year}</div>
+                </div>
+                <div className='list-info-items'>
+                  <p className='tagName'>Tech</p>
+                  <div className='year'>{project.tech}</div>
+                </div>
+                <div className='list-info-items'>
+                  <p className='tagName'>Client</p>
+                  <div className='year'>{project.client}</div>
+                </div>
+              </div>
+              </div>
+            </section>
             {
               project.parallaxImage && 
             <img 
@@ -94,20 +96,29 @@ const ProjectDetails = (props) => {
               src={project.parallaxImage} alt='parallax' /
             >
             }
-            
-             <div className='concept'>
+            <section className='concept-section'>
+             <div className='concept-description'>
+               <div className='concept-title'>Concept</div>
                 {
                   project.concept &&
                   parse(project.concept)
                 }
              </div>
-             {/* {
-              project.defaultImage && 
+             <div className='concept-name'>
+               <div className='concept-title'></div>
+                {
+                  project.conceptName &&
+                  parse(project.conceptName)
+                }
+             </div>
+          </section>
+            {
+                project.resultImage && 
               <img 
-                className="project-details-img-default"
-                src={project.defaultImage} alt='default' 
-              />
-            } */}
+                className="project-details-img-result"
+                src={project.resultImage} alt='result' /
+              >
+            }
         </div>
         :
         <h2>Fetching project, hold on</h2>

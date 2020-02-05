@@ -146,13 +146,6 @@ const Edit = props => {
             placeholder='byline'
             />
           <div className='checkboxes'>
-            <label htmlFor='htmlCss'>html/css</label>
-            <input name='htmlCss' id='htmlCss' type='checkbox' onChange={updateValue} defaultChecked={project.htmlCss}/>
-            <label htmlFor='htmlCss'>Javascript</label>
-            <input name='javascript' id='javascript' type='checkbox' onChange={updateValue} defaultChecked={project.javascript}/>
-            <label htmlFor='ux'>UX</label>
-            <input name='ux' id='ux' type='checkbox' onChange={updateValue} defaultChecked={project.ux}/>
-            <label htmlFor='published'>Published</label>
             <input name='published' id='published' type='checkbox' onChange={updateValue} defaultChecked={project.published}/>
           </div>
           <p>Description: </p>
@@ -168,6 +161,19 @@ const Edit = props => {
             name="concept"
             value={project.concept}
             placeholder="concept"
+          />
+          <textarea
+            onChange={updateValue}
+            name="conceptName"
+            value={project.conceptName}
+            placeholder="concept name"
+          />
+          <p>Target Audience: </p>
+          <textarea
+            onChange={updateValue}
+            name="audience"
+            value={project.audience}
+            placeholder="audience"
           />
 
           <div className='project-images'>
@@ -192,11 +198,19 @@ const Edit = props => {
                 <img src={project.parallaxImage} alt='parallaxImage' />
               </div>
             }
+            {
+              project.resultImage &&
+              <div>
+                <p className='imageNameIndicator'>Result Image</p>
+                <img src={project.resultImage} alt='resultImage' />
+              </div>
+            }
            </div>
           <select name='imageName' onChange={ e => setImageName(e.target.value)}>
             <option name='defaultImage' value='defaultImage'>Default Image</option>
             <option name='displayImage' value='displayImage'>Display Image</option>
             <option name='parallaxImage' value='parallaxImage'>Parallax Image</option>
+            <option name='resultImage' value='resultImage'>Result Image</option>
           </select>
           <label>
             <div className='uploadButton'>

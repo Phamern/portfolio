@@ -1,3 +1,18 @@
-h4 {
-  font-weight: 100;
+.about {
+  display: grid;
+  justify-content: start;
+  padding: 10rem 15rem;
+}
+
+.about .contact-title {
+  font-family: 'Yeseva One', cursive;
+  font-size: 4rem;
+}
+
+.about .contactInfo {
+  display: grid;
+  grid-auto-flow: column;
+  font-size: 1.5rem;
+  gap: 5rem;
+  font-family: "Eczar", serif;
 }

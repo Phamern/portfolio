@@ -1,6 +1,6 @@
 {
-  "name": "react-firestore-template",
-  "homepage": "www.eivindpham.no",
+  "name": "portfolio",
+  "homepage": "https://eivindpham.no",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

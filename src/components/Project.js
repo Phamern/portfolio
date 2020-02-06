@@ -28,8 +28,8 @@ const Project = (props) => {
   }
 
   const goto = e => {
-    console.log('setting top', window.scrollY)
-    props.setTop( t => t + Math.round(window.scrollY))
+    let top = e.target.parentElement.offsetHeight * props.index
+    props.setTop( top )
     navigate(process.env.PUBLIC_URL + '/projects/' + props.id) 
   }
 

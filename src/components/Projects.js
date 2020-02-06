@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './Projects.css'
 import firebase from './firebase'
 import Project from './Project'
@@ -9,6 +9,12 @@ import PulseLoader from 'react-spinners/PulseLoader'
 const Projects = (props) => {
   const [projects, setProjects] = useState()
   const [top, setTop] = useState(0)
+  const scrollContainer = useRef()
+
+  useEffect( () => {
+    console.log('set top', props.top)
+    scrollContainer.current.scroll(0, props.top)
+  })
 
   useEffect( () => {
     console.log('fetch')
@@ -21,11 +27,6 @@ const Projects = (props) => {
     )
   }, [])
 
-  useEffect(()=>{
-    console.log('trying to scroll', top)
-    window.scrollTo(0, top)
-  }, [top])
-
   const addProject = () => {
     firebase.firestore().collection('projects').add(
       {
@@ -37,7 +38,7 @@ const Projects = (props) => {
   }
 
   return (
-    <>
+    <div ref={scrollContainer} className="project-container">
         { props.signedIn &&
             <div className='add'>
                 <IoMdAdd className='icons' onClick={addProject} />
@@ -50,11 +51,12 @@ const Projects = (props) => {
           <>
             {
               projects.map(
-              project => 
+              (project, index) => 
               <Project 
                 key={project.id}
                 id={project.id}
-                setTop={setTop}
+                setTop={props.setTop}
+                index={index}
                 data={project.data()}
                 signedIn={props.signedIn}/>
               )
@@ -64,7 +66,7 @@ const Projects = (props) => {
           <PulseLoader />
         }
 
-    </>
+    </div>
   )
 }
 

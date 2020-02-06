@@ -13,6 +13,7 @@ import LandingPage from './components/LandingPage'
 const App = () => {
 
   const [signedIn, setSignedIn] = useState(false)
+  const [top, setTop] = useState(0)
 
   useEffect( () => {
     console.log('use effect')
@@ -32,7 +33,7 @@ const App = () => {
       <Header signedIn={signedIn} />
       <Router basepath={process.env.PUBLIC_URL}>
         <LandingPage default path='/home' />
-        <Projects path='/projects' signedIn={signedIn} />
+        <Projects top={top} setTop={setTop} path='/projects' signedIn={signedIn} />
         <ProjectDetails signedIn={signedIn} path='/projects/:id'/>
         <Contact path='/about' />
         <Login signedIn={signedIn} setSignedIn={setSignedIn} path='/login' />

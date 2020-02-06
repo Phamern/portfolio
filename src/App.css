@@ -1,7 +1,7 @@
+@import url("https://use.typekit.net/tsd0bbh.css");
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Eczar&display=swap");
 @import url('https://fonts.googleapis.com/css?family=Yeseva+One&display=swap');
-@import url("https://use.typekit.net/tsd0bbh.css");
 
 /* Default settings */
 
@@ -16,7 +16,6 @@ html {
   font-family: "Roboto", sans-serif;
   background-color: #161616;
   color: #fff;
-  scroll-snap-type: y mandatory;
 }
 
 main {

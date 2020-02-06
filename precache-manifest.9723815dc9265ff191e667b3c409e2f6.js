@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "90661cc35705e04d9e6a7a4920662e4d",
+    "revision": "764cb681a32bfb96279873ea211b7bcc",
     "url": "/firebase-template/index.html"
   },
   {
-    "revision": "1aa98fd8107548d0d0d6",
-    "url": "/firebase-template/static/css/main.b819f5ce.chunk.css"
+    "revision": "22fac1c440aa00503d31",
+    "url": "/firebase-template/static/css/main.5d3fa933.chunk.css"
   },
   {
     "revision": "898358ca55b9dcc2668e",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/firebase-template/static/js/2.046779c3.chunk.js.LICENSE"
   },
   {
-    "revision": "1aa98fd8107548d0d0d6",
-    "url": "/firebase-template/static/js/main.4a914807.chunk.js"
+    "revision": "22fac1c440aa00503d31",
+    "url": "/firebase-template/static/js/main.74e5b8ca.chunk.js"
   },
   {
     "revision": "bc24a6f042f009dc0aef",

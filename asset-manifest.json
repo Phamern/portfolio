@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/firebase-template/static/css/main.5d3fa933.chunk.css",
-    "main.js": "/firebase-template/static/js/main.74e5b8ca.chunk.js",
-    "main.js.map": "/firebase-template/static/js/main.74e5b8ca.chunk.js.map",
-    "runtime-main.js": "/firebase-template/static/js/runtime-main.a5b06044.js",
-    "runtime-main.js.map": "/firebase-template/static/js/runtime-main.a5b06044.js.map",
-    "static/js/2.046779c3.chunk.js": "/firebase-template/static/js/2.046779c3.chunk.js",
-    "static/js/2.046779c3.chunk.js.map": "/firebase-template/static/js/2.046779c3.chunk.js.map",
-    "index.html": "/firebase-template/index.html",
-    "precache-manifest.9723815dc9265ff191e667b3c409e2f6.js": "/firebase-template/precache-manifest.9723815dc9265ff191e667b3c409e2f6.js",
-    "service-worker.js": "/firebase-template/service-worker.js",
-    "static/css/main.5d3fa933.chunk.css.map": "/firebase-template/static/css/main.5d3fa933.chunk.css.map",
-    "static/js/2.046779c3.chunk.js.LICENSE": "/firebase-template/static/js/2.046779c3.chunk.js.LICENSE"
+    "main.css": "www.eivindpham.no/static/css/main.5d3fa933.chunk.css",
+    "main.js": "www.eivindpham.no/static/js/main.663439ae.chunk.js",
+    "main.js.map": "www.eivindpham.no/static/js/main.663439ae.chunk.js.map",
+    "runtime-main.js": "www.eivindpham.no/static/js/runtime-main.0b998186.js",
+    "runtime-main.js.map": "www.eivindpham.no/static/js/runtime-main.0b998186.js.map",
+    "static/js/2.8e33a969.chunk.js": "www.eivindpham.no/static/js/2.8e33a969.chunk.js",
+    "static/js/2.8e33a969.chunk.js.map": "www.eivindpham.no/static/js/2.8e33a969.chunk.js.map",
+    "index.html": "www.eivindpham.no/index.html",
+    "precache-manifest.1da484512cb3c42075bcc4ee01d982ec.js": "www.eivindpham.no/precache-manifest.1da484512cb3c42075bcc4ee01d982ec.js",
+    "service-worker.js": "www.eivindpham.no/service-worker.js",
+    "static/css/main.5d3fa933.chunk.css.map": "www.eivindpham.no/static/css/main.5d3fa933.chunk.css.map",
+    "static/js/2.8e33a969.chunk.js.LICENSE": "www.eivindpham.no/static/js/2.8e33a969.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.a5b06044.js",
-    "static/js/2.046779c3.chunk.js",
+    "static/js/runtime-main.0b998186.js",
+    "static/js/2.8e33a969.chunk.js",
     "static/css/main.5d3fa933.chunk.css",
-    "static/js/main.74e5b8ca.chunk.js"
+    "static/js/main.663439ae.chunk.js"
   ]
 }

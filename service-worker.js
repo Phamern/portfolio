@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "www.eivindpham.no/precache-manifest.1da484512cb3c42075bcc4ee01d982ec.js"
+  "www.eivindpham.no/precache-manifest.942ede6d9770104edec5da7d384ef469.js"
 );
 
 self.addEventListener('message', (event) => {

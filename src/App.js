@@ -13,7 +13,19 @@ import LandingPage from './components/LandingPage'
 const App = () => {
 
   const [signedIn, setSignedIn] = useState(false)
+  const [projects, setProjects] = useState()
   const [top, setTop] = useState(0)
+
+  useEffect( () => {
+    console.log('fetch')
+    firebase
+    .firestore()
+    .collection('projects')
+    .orderBy('orderNr')
+    .onSnapshot(
+      snapshot => setProjects(snapshot.docs)
+    )
+  }, [])
 
   useEffect( () => {
     console.log('use effect')
@@ -33,7 +45,7 @@ const App = () => {
       <Header signedIn={signedIn} />
       <Router basepath={process.env.PUBLIC_URL}>
         <LandingPage default path='/home' />
-        <Projects top={top} setTop={setTop} path='/projects' signedIn={signedIn} />
+        <Projects projects={projects} top={top} setTop={setTop} path='/projects' signedIn={signedIn} />
         <ProjectDetails signedIn={signedIn} path='/projects/:id'/>
         <Contact path='/about' />
         <Login signedIn={signedIn} setSignedIn={setSignedIn} path='/login' />

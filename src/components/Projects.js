@@ -7,25 +7,13 @@ import { navigate } from '@reach/router'
 import PulseLoader from 'react-spinners/PulseLoader'
 
 const Projects = (props) => {
-  const [projects, setProjects] = useState()
-  const [top, setTop] = useState(0)
   const scrollContainer = useRef()
 
   useEffect( () => {
-    console.log('set top', props.top)
     scrollContainer.current.scroll(0, props.top)
   })
 
-  useEffect( () => {
-    console.log('fetch')
-    firebase
-    .firestore()
-    .collection('projects')
-    .orderBy('orderNr')
-    .onSnapshot(
-      snapshot => setProjects(snapshot.docs)
-    )
-  }, [])
+  
 
   const addProject = () => {
     firebase.firestore().collection('projects').add(
@@ -46,11 +34,11 @@ const Projects = (props) => {
         }
 
         {
-          projects 
+          props.projects.length > 0
           ?
           <>
             {
-              projects.map(
+              props.projects.map(
               (project, index) => 
               <Project 
                 key={project.id}

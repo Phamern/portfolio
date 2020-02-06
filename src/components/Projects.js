@@ -32,7 +32,7 @@ const Projects = (props) => {
         }
 
         {
-          props.projects.length > 0
+          props.projects
           ?
           <>
             {

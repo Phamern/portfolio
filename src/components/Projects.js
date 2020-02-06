@@ -12,9 +12,7 @@ const Projects = (props) => {
   useEffect( () => {
     scrollContainer.current.scroll(0, props.top)
   })
-
   
-
   const addProject = () => {
     firebase.firestore().collection('projects').add(
       {

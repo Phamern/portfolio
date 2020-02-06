@@ -1,6 +1,6 @@
 {
   "name": "react-firestore-template",
-  "homepage": "eivindpham.no",
+  "homepage": "www.eivindpham.no",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,7 +19,8 @@
     "react-reveal": "^1.2.2",
     "react-scripts": "3.3.0",
     "react-spinners": "^0.8.0",
-    "react-spring": "^8.0.27"
+    "react-spring": "^8.0.27",
+    "serialize-javascript": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

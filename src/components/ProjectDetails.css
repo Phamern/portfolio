@@ -140,7 +140,7 @@ section {
   margin-top: 10rem;
   margin-bottom: 7rem;
   font-family: "Eczar", serif;
-  text-align: justify;
+  text-align: left;
   justify-self: left;
   padding-right: 5rem;
   grid-column: 1 / 2;

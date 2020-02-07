@@ -21,9 +21,9 @@ const Header = ( props ) => {
 
   return (
     <div className='header-container'>
-      <MdMenu className='burger-menu edit-icons' size='32'onClick={ () => setShow(!show)} />
+      <MdMenu className='burger-menu edit-icons' size='32' onClick={ () => setShow(!show)} />
       <header  className={ show ? 'visible' : ''} onClick={ () => setShow(false)}>
-        <Link className='logo' to='/home'><img className='logo-home'src={logoWhite}></img></Link>
+        <Link className='logo' to='/home'><img className='logo-home'src={logoWhite} alt='logo'></img></Link>
         <div className='header-right-items'>
           <Link getProps={isPartiallyActive} to={process.env.PUBLIC_URL + '/projects'}>projects</Link>
           <p className='divider'>|</p>

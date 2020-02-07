@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import './Projects.css'
 import firebase from './firebase'
 import Project from './Project'

@@ -6,7 +6,7 @@ const Contact = () => {
     <>
       <main className='about'>
         <section className='top-info-section'>
-          <div className='contact-title'>Contact</div>
+          <div className='contact-title'>About</div>
           <div className='info-grid'>
             <div className='contact-info'>
               <div className="description">

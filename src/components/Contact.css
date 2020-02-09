@@ -2,7 +2,6 @@
   display: grid;
   grid-auto-flow: row;
   padding-top: 10rem;
-  height: 50%;
 }
 
 .info-grid {
@@ -56,4 +55,39 @@
   font-family: 'Yeseva One', cursive;
   font-size: 1rem;
   font-weight: 300;
+}
+
+@media (max-width: 900px) {
+
+  .about {
+    justify-content: center;
+    padding-top: 5rem;
+    padding-left: 2rem;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  .top-info-section {
+    padding: 0;
+  }
+  .description {
+    margin-bottom: 3rem;
+  }
+
+  .contact-title {
+    font-size: 3rem;
+    padding-left: 2rem;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+  }
+
+  .info-grid {
+    display: block;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    margin-bottom: 3rem;
+  }
+
 }

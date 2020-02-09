@@ -3,15 +3,39 @@ import './Contact.css'
 
 const Contact = () => {
   return (
-    <main className='about'>
-      <div className='contact-title'>Contact</div>
-      <div className='contactInfo'>
-        <div className='contact-name'>Eivind Madsen Pham</div>
-        <div className='contact-description'>I'm currently a designstudnet with passion for digital design and conceptual thinking</div>
-        <div className='contact-phone'>+47 908 96 870</div>
-        <div className='contact-email'>eivindmpham@gmail.com</div>
-      </div>
-    </main>
+    <>
+      <main className='about'>
+        <section className='top-info-section'>
+          <div className='contact-title'>Contact</div>
+          <div className='info-grid'>
+            <div className='contact-info'>
+              <div className="description">
+                I'm an digital designer who loves to base my design through conceptual thinking. I love working with the whole design process and to implement these designs through code.<br />
+                I'm a firm believer that through a thorough design process, and knowledge for all both design methods and code, you'll be able to make  high quality solutions.
+              </div>
+            </div>
+              <div className='contact-list-info'>
+                <div className='list-info-items'>
+                  <p className='tagName'>email</p>
+                  <div className='year'>eivindmpham@gmail.com</div>
+                </div>
+                <div className='list-info-items'>
+                  <p className='tagName'>phone</p>
+                  <div className='year'>+47 908 96 870</div>
+                </div>
+                <div className='list-info-items'>
+                  <p className='tagName'>Linkedin</p>
+                  <a href="https://www.linkedin.com/in/eivind-madsen-pham-154338198/" className='year'>Link</a>
+                </div>
+                <div className='list-info-items'>
+                  <p className='tagName'>Github</p>
+                  <a href="https://github.com/Phamern?tab=repositories" className='year'>Link</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
   )
 }
 

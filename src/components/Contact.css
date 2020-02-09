@@ -1,12 +1,14 @@
 .about {
   display: grid;
-  justify-content: start;
-  padding: 10rem 15rem;
+  grid-auto-flow: row;
+  padding-top: 10rem;
+  height: 50%;
 }
 
-.about .contact-title {
-  font-family: 'Yeseva One', cursive;
-  font-size: 4rem;
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 30vh;
 }
 
 .about .contactInfo {
@@ -15,4 +17,43 @@
   font-size: 1.5rem;
   gap: 5rem;
   font-family: "Eczar", serif;
+}
+
+.contact-title {
+  font-size: 4rem;
+  font-family: 'eskapade-fraktur', serif;
+  font-family: 'Yeseva One', cursive;
+  margin-bottom: 7rem;
+  animation: fadeIn 1.5s ease .5s;
+  animation-fill-mode: backwards;
+}
+
+.description {
+  width: 100%;
+  padding-right: 2rem;
+  font-family: "Eczar", serif;
+  font-size: 1.3rem;
+  animation: fadeIn 1.5s ease .75s;
+  animation-fill-mode: backwards;
+}
+
+.contact-list-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: end;
+  gap: 1rem;
+  border-left: 1px solid #fff;
+  padding-left: 3rem;
+  animation: fadeIn 1.5s ease .75s;
+  animation-fill-mode: backwards;
+}
+
+.contact-list-info .list-info-items {
+ justify-content: end;
+}
+
+.contact-list-info .list-info-items .tagName {
+  font-family: 'Yeseva One', cursive;
+  font-size: 1rem;
+  font-weight: 300;
 }

@@ -39,6 +39,7 @@
 
   .introPage {
     padding-left: 2rem;
+    overflow: hidden;
   }
 
   .introPage .name-wrapper {

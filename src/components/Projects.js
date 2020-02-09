@@ -51,7 +51,6 @@ const Projects = (props) => {
           :
           <PulseLoader />
         }
-
     </div>
   )
 }

@@ -34,30 +34,32 @@ const Project = (props) => {
   }
 
   return (
-    <div className="project">
-      {
-        props.data.defaultImage && 
-        <animated.img 
-          className="project-overview-img"
-          onMouseMove={({ clientX: x, clientY: y }) => setAnimation({ xys: calc(x, y) })}
-          onMouseLeave={() => setAnimation({ xys: [0, 0, 1] })}
-          style={{ transform: animation.xys.interpolate(trans) }}
-          onClick={goto} 
-          src={props.data.defaultImage} alt='default' 
-        />
-      }
-        <div className='display-title'>{props.data.title}</div>
-        <Link className='view-project' to={process.env.PUBLIC_URL + '/projects/' + props.id}>View project</Link>
-      {
-        props.signedIn &&
-      <div className='admin-icons'>
-        <Link to={process.env.PUBLIC_URL + '/edit/' + props.id}>
-          <IoIosCode />
-        </Link>
-        <IoMdTrash onClick={removeProject} />
+    <>
+      <div className="project">
+        {
+          props.data.defaultImage && 
+          <animated.img 
+            className="project-overview-img"
+            onMouseMove={({ clientX: x, clientY: y }) => setAnimation({ xys: calc(x, y) })}
+            onMouseLeave={() => setAnimation({ xys: [0, 0, 1] })}
+            style={{ transform: animation.xys.interpolate(trans) }}
+            onClick={goto} 
+            src={props.data.defaultImage} alt='default' 
+          />
+        }
+          <div className='display-title'>{props.data.title}</div>
+          <Link className='view-project' to={process.env.PUBLIC_URL + '/projects/' + props.id}>View project</Link>
+        {
+          props.signedIn &&
+        <div className='admin-icons'>
+          <Link to={process.env.PUBLIC_URL + '/edit/' + props.id}>
+            <IoIosCode />
+          </Link>
+          <IoMdTrash onClick={removeProject} />
+        </div>
+        }
       </div>
-      }
-    </div>
+    </>
   )
 }
 

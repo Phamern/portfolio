@@ -10,19 +10,19 @@
   height: 30vh;
 }
 
-.about .contactInfo {
+/* .about .contact-info {
   display: grid;
   grid-auto-flow: column;
   font-size: 1.5rem;
-  gap: 5rem;
+  gap: 2rem;
   font-family: "Eczar", serif;
-}
+} */
 
 .contact-title {
   font-size: 4rem;
   font-family: 'eskapade-fraktur', serif;
   font-family: 'Yeseva One', cursive;
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
   animation: fadeIn 1.5s ease .5s;
   animation-fill-mode: backwards;
 }
@@ -57,7 +57,7 @@
   font-weight: 300;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
 
   .about {
     justify-content: center;
@@ -70,9 +70,10 @@
   }
 
   .top-info-section {
-    padding: 0;
+    padding: 0 2rem;
   }
   .description {
+    font-size: 1.1rem;
     margin-bottom: 3rem;
   }
 

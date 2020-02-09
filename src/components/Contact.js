@@ -10,8 +10,8 @@ const Contact = () => {
           <div className='info-grid'>
             <div className='contact-info'>
               <div className="description">
-                I'm an digital designer who loves to base my design through conceptual thinking. I love working with the whole design process and to implement these designs through code.<br />
-                I'm a firm believer that through a thorough design process, and knowledge for all both design methods and code, you'll be able to make  high quality solutions.
+                I'm an digital designer who love to base my design through conceptual thinking. I love working with the whole design process and to implement these designs through code.<br />
+                I'm a firm believer that through a thorough design process, and knowledge for both design methods and code, you'll be able to make  high quality solutions.
               </div>
             </div>
               <div className='contact-list-info'>

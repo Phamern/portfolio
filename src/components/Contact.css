@@ -4,7 +4,7 @@
   padding-top: 10rem;
 }
 
-.info-grid {
+.about .info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 30vh;
@@ -18,7 +18,7 @@
   font-family: "Eczar", serif;
 } */
 
-.contact-title {
+.about .contact-title {
   font-size: 4rem;
   font-family: 'eskapade-fraktur', serif;
   font-family: 'Yeseva One', cursive;
@@ -27,7 +27,7 @@
   animation-fill-mode: backwards;
 }
 
-.description {
+.about .description {
   width: 100%;
   padding-right: 2rem;
   font-family: "Eczar", serif;
@@ -36,7 +36,7 @@
   animation-fill-mode: backwards;
 }
 
-.contact-list-info {
+.about .contact-list-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: end;
@@ -47,11 +47,11 @@
   animation-fill-mode: backwards;
 }
 
-.contact-list-info .list-info-items {
+.about .contact-list-info .list-info-items {
  justify-content: end;
 }
 
-.contact-list-info .list-info-items .tagName {
+.about .contact-list-info .list-info-items .tagName {
   font-family: 'Yeseva One', cursive;
   font-size: 1rem;
   font-weight: 300;
@@ -63,31 +63,49 @@
     justify-content: center;
     padding-top: 5rem;
     padding-left: 2rem;
+    overflow-x: hidden;
   }
 
-  section {
+  .about section {
     margin-bottom: 3rem;
   }
 
-  .top-info-section {
+  .about .top-info-section {
     padding: 0 2rem;
   }
-  .description {
+
+  .about .description {
     font-size: 1.1rem;
     margin-bottom: 3rem;
+    width: 90vw;
   }
 
-  .contact-title {
+  .about .contact-title {
     font-size: 3rem;
-    padding-left: 2rem;
+    padding-left: 1rem;
     margin-top: 7rem;
     margin-bottom: 3rem;
   }
 
-  .info-grid {
+  .about .contact-list-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row;
+    justify-content: start;
+    margin-bottom: 2rem;
+  }
+  
+  /* .about .contact-list-info .list-info-items {
+    display: grid;
+    grid-auto-flow: row;;
+   justify-content: start;
+  } */
+
+  .about .top-info-section .info-grid {
     display: block;
-    padding-left: 2rem;
-    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
     margin-bottom: 3rem;
   }
 

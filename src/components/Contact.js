@@ -17,19 +17,17 @@ const Contact = () => {
               <div className='contact-list-info'>
                 <div className='list-info-items'>
                   <p className='tagName'>email</p>
-                  <div className='year'>eivindmpham@gmail.com</div>
+                  <a href='mailto:eivindmpham@gmail.com'className='year'>eivindmpham@gmail.com</a>
                 </div>
                 <div className='list-info-items'>
                   <p className='tagName'>phone</p>
                   <div className='year'>+47 908 96 870</div>
                 </div>
                 <div className='list-info-items'>
-                  <p className='tagName'>Linkedin</p>
-                  <a href="https://www.linkedin.com/in/eivind-madsen-pham-154338198/" className='year'>Link</a>
+                  <a href="https://www.linkedin.com/in/eivind-madsen-pham-154338198/"  className='tagName'>Linkedin</a>
                 </div>
                 <div className='list-info-items'>
-                  <p className='tagName'>Github</p>
-                  <a href="https://github.com/Phamern?tab=repositories" className='year'>Link</a>
+                  <a href="https://github.com/Phamern?tab=repositories"  className='tagName'>Github</a>
               </div>
             </div>
           </div>

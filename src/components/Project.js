@@ -13,9 +13,6 @@ const Project = (props) => {
 
   const [animation, setAnimation] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 50, tension: 350, friction: 40 } }))
 
-  // const [activeProject, setActiveProject] = useState(false)
-  // onClick={ () => setActiveProject(!activeProject)} className={activeProject ? 'project active' : 'project'}
-
   const removeProject = () => {
     if(window.confirm('sure?')) {
       firebase.firestore()

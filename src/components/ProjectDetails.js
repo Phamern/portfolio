@@ -9,8 +9,6 @@ import { Link } from '@reach/router'
 
 const ProjectDetails = (props) => {
 
-  // const fadein = useSpring({opacity: 1, from: {opacity: 0}})
-
   const [project, setProject] = useState()
   const [prev, setPrev] = useState()
   const [next, setNext] = useState()

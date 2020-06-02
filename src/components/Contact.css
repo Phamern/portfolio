@@ -10,14 +10,6 @@
   height: 30vh;
 }
 
-/* .about .contact-info {
-  display: grid;
-  grid-auto-flow: column;
-  font-size: 1.5rem;
-  gap: 2rem;
-  font-family: "Eczar", serif;
-} */
-
 .about .contact-title {
   font-size: 4rem;
   font-family: 'eskapade-fraktur', serif;
@@ -95,12 +87,6 @@
     justify-content: start;
     margin-bottom: 2rem;
   }
-  
-  /* .about .contact-list-info .list-info-items {
-    display: grid;
-    grid-auto-flow: row;;
-   justify-content: start;
-  } */
 
   .about .top-info-section .info-grid {
     display: block;

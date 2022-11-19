@@ -17,7 +17,7 @@
     "react-icons": "^3.8.0",
     "react-masonry-css": "^1.0.14",
     "react-reveal": "^1.2.2",
-    "react-scripts": "3.3.0",
+    "react-scripts": "5.0.1",
     "react-spinners": "^0.8.0",
     "react-spring": "^8.0.27",
     "serialize-javascript": "^2.1.2"
